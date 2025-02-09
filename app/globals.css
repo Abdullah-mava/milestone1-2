@@ -1,0 +1,21 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.resume_wrapper {
+    width: 210mm; /* A4 width */
+    min-height: 297mm; /* A4 height */
+    background: white !important;
+  }
+  
+  @media print {
+    body {
+      visibility: hidden;
+    }
+    .resume_wrapper {
+      visibility: visible;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
